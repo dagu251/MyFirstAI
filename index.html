@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hello HackerU</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #333333; /* dark grey */
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    #hello-btn {
+      padding: 20px 40px;
+      font-size: 2rem;
+      font-weight: bold;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      background: #ffcc00;
+      color: #222;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      transition: transform 0.1s ease, box-shadow 0.1s ease;
+    }
+
+    #hello-btn:active {
+      transform: translateY(2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+  </style>
+</head>
+<body>
+  <button id="hello-btn">Hello HackerU</button>
+
+  <script>
+    const btn = document.getElementById("hello-btn");
+
+    function randomColor() {
+      const r = Math.floor(Math.random() * 256);
+      const g = Math.floor(Math.random() * 256);
+      const b = Math.floor(Math.random() * 256);
+      return `rgb(${r}, ${g}, ${b})`;
+    }
+
+    btn.addEventListener("click", () => {
+      alert("💻 Warning: Excessive awesomeness detected at HackerU!");
+      document.body.style.backgroundColor = randomColor();
+    });
+  </script>
+</body>
+</html>
